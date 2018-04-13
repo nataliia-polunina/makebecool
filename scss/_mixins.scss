@@ -1,0 +1,52 @@
+@mixin background-image($src) {
+	background-image: url($src);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin position-center() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%); 
+}	
+
+@mixin link-decoration() {
+	text-decoration: none;
+	color: #fff;
+}
+
+@mixin hover-effect() {
+	&:hover,
+	&:focus,
+	&:active {
+		border: 1px solid #fff;
+		outline: none;
+	}	
+}
+
+@mixin hover-link() {
+	&:hover,
+	&:focus,
+	&:active {
+		border-bottom: 2px solid #fff;
+	}
+}
+
+@mixin section-main() {
+	h1 {
+			margin-top: 85px;
+			&:after {
+			content: '';
+			width: 280px;
+			border-bottom: 1px solid #fff;
+			opacity: .5;
+			display: inline-block;
+			}			
+		}
+		.section__btn {
+			width: 225px;
+			padding: 14px;
+		}
+}

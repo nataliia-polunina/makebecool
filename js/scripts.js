@@ -11,10 +11,12 @@
 
 	$('.single-item').slick({
 		autoplay: true,
-		arrows: false,
+		//arrows: true,
 		infinite: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 1000,
 		speed: 1000,
+		fade:true,
+		cssEase: 'ease-in-out'
 	});
 
 	$('.menu__burger').on('click',function(e) {

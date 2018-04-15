@@ -172,8 +172,28 @@ body {
 		}	
 	}
 	&--about {
+		h1 {
+				margin: 60px 0 40px;
+			}
 		h2 {
-			text-transform: uppercase;			
+			text-transform: uppercase;	
+			&:before {
+				content: '';
+    			display: inline-block;
+    			width: 10px;
+    			height: 5px;
+    			background-color: #014db7;
+    			position: absolute;
+    			left: -15px;
+    			top: 95px;
+			}		
+		}
+
+		@media (min-width: 768px) {
+			.section__text {
+				display: inline-block;
+				width: 220px;
+			}
 		}
 	}
 	&--counters {
@@ -285,20 +305,51 @@ body {
 
 	}
 	&__work {
+		position: relative;
 		@media (min-width: 768px) {
 			display: inline-block;
+			width: 47%;
+			padding: 0 35px;
+			h2 {
+				height: 54px;
+				&:before {
+				content: '';
+    			display: inline-block;
+    			width: 30px;
+    			height: 5px;
+    			background-color: #014db7;
+    			position: absolute;
+    			left: 0;
+    			top: 95px;
+			}		
+			}
 		}
 	}
+	&__counters {
+	}
+
 	&__counter {
 		list-style-type: none;
+		position: relative;
+		p::before {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 30px;
+			background-image: url(../img/more.png);
+			top: 50px;
+			left: -30px;
+		}
 		@media (min-width: 768px) {
 			display: inline-block;
+			width: 47%;
 		}
 		
 	}
 	&__contract {
 		@media (min-width: 768px) {
 			display: inline-block;
+			width: 47%;
 		}
 		&:after {
 			content: '';

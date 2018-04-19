@@ -415,7 +415,18 @@ body {
 		@media (min-width: 768px) {
 			height: 730px;
 		}
+		@media (min-width: 992px) {
+			@include space-between();
+			height: 600px;
+		}
 	}
+	// &__project--middle {
+	// 	@media (min-width: 992px) {
+	// 		display: flex;
+	// 		flex-direction: row-reverse;
+	// 		justify-content: space-between;
+	// 	}
+	// }
 	&__contract {
 		@media (min-width: 768px) {
 			display: inline-block;
@@ -455,9 +466,15 @@ body {
 		font: 400 12px/1.5 'PTAstraSans-regular', sans-serif;
 		div {
 			width: 50%;
+			@media (min-width: 992px) {
+				width: 100%;
+			}
 		}
 		&__data {
 			padding: 0 50px 0 120px;
+			@media (min-width: 992px) {
+				padding: 0 20px 0 50px;
+			}
 		}
 		span,
 		&__subtitle {
@@ -479,6 +496,11 @@ body {
 	    		top: 7px;
 			}		
 		}
+	}
+	@media (min-width: 992px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}	
 }
 
@@ -498,7 +520,7 @@ body {
 		outline: none;
 		border-right: none;
 		border-left: none;
-		border-top: #9197a1;
+		border-top: none;
 		color: #000;
 		text-align: center;
 		&:focus,
@@ -513,8 +535,34 @@ body {
 			}
 		}
 	}	
+	.file__input {
+		border-bottom: 2px inset #f0eeee;
+		label {
+			cursor: pointer;
+			color: #989ea7;
+			font-size: 14px;
+			span {
+				display: block;
+				@media (min-width: 768px) {
+					display: inline-block;
+					width: 190px;					
+				}
+			}
+			.choose__file {
+				display: inline-block;
+				text-decoration: underline;
+				vertical-align: middle;
+				padding: 0 5px 10px;
+				height: 40px;
+			}
+		}
+	}
+	#fl__input {
+		display: none;
+	}
 	span {
 		display: inline-block;
+		font-size: 14px;
 		color: #989ea7;
 	}
 	&__submit {
@@ -591,7 +639,6 @@ body {
 	}
 	&__social {
 		@media (min-width: 768px) {
-			//width: 200px;
 			flex-basis: 200px;
 		}	
 	}

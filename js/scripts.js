@@ -27,7 +27,6 @@
 
 	$('.single-item').slick({
 		autoplay: true,
-		//arrows: true,
 		infinite: true,
 		autoplaySpeed: 1000,
 		speed: 1000,
@@ -40,5 +39,13 @@
 
 		$('body').toggleClass('menu-opened');
 	});
+
+	$(document).ready( function() {
+    $("#fl__input").change(function(){
+         var filename = $(this).val().replace(/.*\\/, "");
+         console.log(filename);
+         $("#fl__name").html(filename);
+    });
+});
 	
 })(jQuery);

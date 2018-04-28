@@ -35,10 +35,22 @@
 				<ul class="menu__items">
 					<li class="menu__item"><a class="menu__link" href="#"> О нас</a></li>
 					<li class="menu__item"><a class="menu__link" href="#"> Проекты </a></li>
-					<li class="menu__item"><a class="menu__link" href="#"> Услуги</a></li>
+					<li class="menu__item"><a class="menu__link"  href="#" data-toggle="dropdown"> Услуги</a>
+					<!-- <ul>
+ 						<li><a href="#">Генеральный подряд </a></li>
+ 						<li><a href="#">Общестроительные работы</a></li>
+ 						<li><a href="#">Отделочные работы</a></li>
+ 						<li><a href="#">Инжиниринг</a></li>
+					</ul> -->
+					</li>
 					<li class="menu__item"><a class="menu__link" href="#"> Новости </a></li>
 					<li class="menu__item"><a class="menu__link" href="#"> Контакты </a></li>
 				</ul>
+			</div>
+			<div class="language">
+				<a class="ukrainian" href="#"><img src="img/ukr.jpg" alt="language"></a>
+				<a class="russian" href="#"><img src="img/rus.jpg" alt="language"></a>
+				<a class="english" href="#"><img src="img/eng.jpg" alt="language"></a>
 			</div>
 		</div>
 	</header>
@@ -261,60 +273,54 @@
 	</section>
 	<section class="section section--works">
 		<h1 class="section__title section__title--black">Как мы работаем</h1>
-		<div class="section__contract">
-			<div>
-				<svg width="44px" height="56px">
-					<use xlink:href="#icon5" ></use>
-				</svg>
-				<h2 class="section__subtitle">Договор генподряда</h2>
-				<p class="section__text section__text--black">Четкое следование утвержденным планам и графикам, не бросаем клиента после сдачи объекта</p>
-				<a href="" class="section__btn section__btn--grey">Узнать больше
-					<svg width="42px" height="7px" >
-						<use xlink:href="#arrow1" ></use>
+		<div class="section__contracts">
+			<div class="section__contract">
+					<svg width="44px" height="56px">
+						<use xlink:href="#icon5" ></use>
 					</svg>
-				</a>
+					<h2 class="section__subtitle">Договор генподряда</h2>
+					<p class="section__text section__text--black">Четкое следование утвержденным планам и графикам, не бросаем клиента после сдачи объекта</p>
+					<a href="" class="section__btn section__btn--grey">Узнать больше
+						<svg width="42px" height="7px" >
+							<use xlink:href="#arrow1" ></use>
+						</svg>
+					</a>
 			</div>
-		</div>
-		<div class="section__contract">
-			<div>
-				<svg width="57px" height="57px">
-					<use xlink:href="#icon6"></use>
-				</svg>
-				<h2 class="section__subtitle">Комплексное решение</h2>
-				<p class="section__text section__text--black">Делаем все работы полностью под ключ</p>
-				<a href="" class="section__btn section__btn--grey">Узнать больше
-					<svg width="42px" height="7px" >
-						<use xlink:href="#arrow1" ></use>
+			<div class="section__contract">
+					<svg width="57px" height="57px">
+						<use xlink:href="#icon6"></use>
 					</svg>
-				</a>
+					<h2 class="section__subtitle">Комплексное решение</h2>
+					<p class="section__text section__text--black">Делаем все работы полностью под ключ</p>
+					<a href="" class="section__btn section__btn--grey">Узнать больше
+						<svg width="42px" height="7px" >
+							<use xlink:href="#arrow1" ></use>
+						</svg>
+					</a>
 			</div>
-		</div>
-		<div class="section__contract">
-			<div>
-				<svg width="59px" height="59px">
-					<use xlink:href="#icon7" ></use>
-				</svg>
-				<h2 class="section__subtitle">Авторский и технический надзор проекта</h2>
-				<p class="section__text section__text--black">Прорабское управление и контроль объекта на месте</p>
-				<a href="" class="section__btn section__btn--grey">Узнать больше
-					<svg width="42px" height="7px" >
-						<use xlink:href="#arrow1" ></use>
+			<div class="section__contract">
+					<svg width="59px" height="59px">
+						<use xlink:href="#icon7" ></use>
 					</svg>
-				</a>
+					<h2 class="section__subtitle">Авторский и технический надзор проекта</h2>
+					<p class="section__text section__text--black">Прорабское управление и контроль объекта на месте</p>
+					<a href="" class="section__btn section__btn--grey">Узнать больше
+						<svg width="42px" height="7px" >
+							<use xlink:href="#arrow1" ></use>
+						</svg>
+					</a>
 			</div>
-		</div>
-		<div class="section__contract">
-			<div>
-				<svg width="43px" height="55px">
-					<use xlink:href="#icon8" ></use>
-				</svg>
-				<h2 class="section__subtitle">Договор на послегарантийное обслуживание</h2>
-				<p class="section__text section__text--black"></p>
-				<a href="" class="section__btn section__btn--grey">Узнать больше
-					<svg width="42px" height="7px" >
-						<use xlink:href="#arrow1" ></use>
+			<div class="section__contract">
+					<svg width="43px" height="55px">
+						<use xlink:href="#icon8" ></use>
 					</svg>
-				</a>
+					<h2 class="section__subtitle">Договор на послегарантийное обслуживание</h2>
+					<p class="section__text section__text--black"></p>
+					<a href="" class="section__btn section__btn--grey">Узнать больше
+						<svg width="42px" height="7px" >
+							<use xlink:href="#arrow1" ></use>
+						</svg>
+					</a>
 			</div>
 		</div>
 	</section>
@@ -339,6 +345,12 @@
 				</div>
 				<div class="slider__img">
 					<img src="img/life.jpg" alt="" >
+				</div>
+				<div class="slider__img">
+					<img src="img/ukrsocbank.jpg" alt="" >
+				</div>
+				<div class="slider__img">
+					<img src="img/DVBank.jpg" alt="" >
 				</div>
 			</div>
 		</div>

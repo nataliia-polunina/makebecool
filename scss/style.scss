@@ -263,6 +263,7 @@ body {
 		}	
 	}
 	&--about {
+		margin-bottom: 50px;
 		h1 {
 				margin: 60px 0 40px;
 			}
@@ -375,7 +376,7 @@ body {
 	&--works {
 		padding: 0 20px;
 		h1 {
-			margin-bottom: 0;
+			margin: 40px 0;
 		}
 	}
 	&--partners {
@@ -451,13 +452,42 @@ body {
 	}
 	&__work {
 		position: relative;
+		z-index: 1;
+		border: 3px solid transparent;
 		p {
 			font-size: 16px;
+		}
+		&:hover {
+			border: 3px solid #f47d42;
+			&:before,
+			&:after {
+				content: '';
+				background: #fff;
+				display: inline-block;
+				width: 80%;
+				height: 103%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+			}
+			&:after {
+				width: 103%;
+				height: 80%;
+			}	
+			.section__btn--grey {
+				color: #f47d42;
+			}
+			#arrow1 path {
+				fill: #f47d42 !important;
+				fill-rule: evenodd;
+			}
 		}
 		@media (min-width: 768px) {
 			display: inline-block;
 			width: 47%;
-			padding: 0 35px;
+			padding: 20px 20px 0 35px;
 			h2 {
 				height: 54px;
 				&:before {
@@ -468,12 +498,13 @@ body {
 	    			background-color: #014db7;
 	    			position: absolute;
 	    			left: 0;
-	    			top: 95px;
+	    			top: 115px;
 				}		
 			}
 		}
 		@media (min-width: 992px) {
 			width: 24%;
+			margin: 0 3px;
 		}
 	}
 	&__counters {
@@ -561,7 +592,7 @@ body {
 			top:0;
 			left: -10px;
 			content: '';
-			width: 105%;
+			width: 106%;
 			height: 100%;
 			display: inline-block;
 			border-bottom: 1px solid #989ea7;
@@ -578,6 +609,18 @@ body {
 			border-right: 1px solid #989ea7;
 			border-left: 1px solid #989ea7;	
 		}	
+		&:hover {
+			&:after {
+				border-bottom: 1px solid #f47d42;
+				border-top: 1px solid #f47d42;
+			}
+			&:before {
+				border-right: 1px solid #f47d42;
+				border-left: 1px solid #f47d42;
+				z-index: 1;
+			}
+			box-shadow: 3px 5px 40px #f47d42;
+		}
 	}
 }
 
@@ -705,9 +748,18 @@ body {
 		color: #014db7;
 		padding-left: 15px;
 		font: 400 14px 'aleo', serif;
+		img {
+			display: none;
+		}
 		&:hover {
-			background-color: #014db7;
-			color: #fff;
+			border: 2px solid #f47d42;
+			color: #f47d42;
+			vertical-align: middle;
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 10px;
+			}
 		}
 	}	
 }
@@ -871,7 +923,6 @@ body {
 
 #arrow1 path {
 	fill: #9197a1;
-	//stroke: #9197a1;
 	fill-rule: evenodd;
 	&:hover,
 	&:focus,

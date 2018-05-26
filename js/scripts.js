@@ -40,6 +40,18 @@
 		$('body').toggleClass('menu-opened');
 	});
 
+	$('.menu__dropdown1').on('click',function(e) {
+		e.preventDefault();
+
+		$('.menu__item--dropdown1').toggleClass('submenu-opened');
+	});
+
+	$('.menu__dropdown2').on('click',function(e) {
+		e.preventDefault();
+
+		$('.menu__item--dropdown2').toggleClass('submenu-opened');
+	});
+
 	$(document).ready( function() {
     $("#fl__input").change(function(){
          var filename = $(this).val().replace(/.*\\/, "");

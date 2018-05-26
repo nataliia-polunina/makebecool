@@ -103,7 +103,7 @@ body {
 		padding-top: 10px;
 		max-height: 0;
 		opacity: 0;
-		overflow-y: hidden;
+		//overflow-y: hidden;
 		transition: all .4s ease;
 		.language {
 			display: flex;
@@ -140,7 +140,8 @@ body {
 	}
 	&__item {
 		display: block;
-		&--dropdown {
+		&--dropdown1,
+		&--dropdown2 {
 			position: relative;	
 			padding-right: 10px;			
 		}
@@ -153,8 +154,7 @@ body {
 		}
 	}
 	&__link {
-		display: block;
-		
+		display: block;		
 		width: 100%;
 		padding: 15px;
 		transition: all .4s ease;
@@ -185,7 +185,8 @@ body {
 			display: none;
 		}
 	}
-	&__dropdown {
+	&__dropdown1,
+	&__dropdown2 {
 		display: block;
 		z-index: 2;
 		width: 10px;
@@ -196,9 +197,6 @@ body {
 		transition: all .4s ease; 
 		@include background-image('../img/arrow.png'); 
 		transform: rotate(-90deg);
-		&:active {
-			transform: rotate(90deg);
-		}
 		@media (min-width: 992px) {
 			top: 18px;
 			right: 0;			
@@ -206,13 +204,32 @@ body {
 	}
 }
 .submenu {
+	display: none;
+	li {
+		padding-bottom: 15px;
+	}
+		
 	li a {
-		@include link-decoration(); 		
+		@include link-decoration(); 
 	}
 	@media (min-width: 992px) {
 		position: absolute;
-
 	}
+}
+
+.submenu-opened .menu__dropdown1,
+.submenu-opened .menu__dropdown2, {
+	transform: rotate(90deg);
+}
+
+.submenu-opened .submenu {
+	display: block;
+	z-index: 3;
+	height: 150px;
+	width: 350px;
+	list-style: none;
+	top: 50px;	
+	text-align: left;
 }
 
 .menu-opened .menu__burger {
@@ -478,10 +495,9 @@ body {
 			}	
 			.section__btn--grey {
 				color: #f47d42;
-			}
-			#arrow1 path {
-				fill: #f47d42 !important;
-				fill-rule: evenodd;
+				svg use {
+					fill: #f47d42 !important;
+				}
 			}
 		}
 		@media (min-width: 768px) {
@@ -921,13 +937,13 @@ body {
 	fill-rule: evenodd;
 }
 
-#arrow1 path {
-	fill: #9197a1;
-	fill-rule: evenodd;
-	&:hover,
-	&:focus,
-	&:active {
-		fill: #f47d42;
-		//stroke: #f47d42;
-	} 
-}
+// #arrow1 path {
+// 	fill: #9197a1;
+// 	fill-rule: evenodd;
+// 	&:hover,
+// 	&:focus,
+// 	&:active {
+// 		fill: #f47d42;
+// 		//stroke: #f47d42;
+// 	} 
+// }

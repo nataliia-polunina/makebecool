@@ -205,7 +205,7 @@ body {
 .submenu {
 	display: none;
 	li {
-		padding-bottom: 15px;
+		padding: 10px 20px;
 	}		
 	li a {
 		@include link-decoration(); 
@@ -223,11 +223,17 @@ body {
 .submenu-opened .submenu {
 	display: block;
 	z-index: 3;
-	height: 150px;
-	width: 350px;
+	height: 180px;
+	width: 260px;
 	list-style: none;
+	background-color: #000;
+	padding: 15px 0;
 	top: 50px;	
 	text-align: left;
+	li:hover,
+	li:focus {
+		background-color: #1a1a1a; 
+	}
 }
 
 .menu-opened .menu__burger {
@@ -418,12 +424,12 @@ body {
 	&--form {
 		@include background-image('../img/bg3_sm.jpg');
 		padding: 10px;
+		h1, 
+		p {
+			text-align: center;
+		}		
 		@media (min-width: 768px) {
 			@include background-image('../img/bg3.jpg');
-			h1, 
-			p {
-				text-align: center;
-			}		
 		}
 		@media (min-width: 992px) {
 			@include background-image('../img/bg3_b.jpg');
@@ -517,6 +523,9 @@ body {
 		@media (min-width: 768px) {
 			display: inline-block;
 			width: 47%;
+			&:nth-of-type(2n) {
+				margin-left: 25px;
+			}
 			h2 {
 				height: 54px;
 				&:before {
@@ -533,12 +542,11 @@ body {
 		}
 		@media (min-width: 992px) {
 			width: 24%;
-			margin: 0 3px;
+			&:nth-of-type(n) {
+				margin: 0 3px;
+			}	
 		}
 	}
-	&__counters {
-	}
-
 	&__counter {
 		list-style-type: none;
 		position: relative;
